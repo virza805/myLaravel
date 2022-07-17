@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 https://www.artofcse.com/learning/project-analysis-and-database-design
 
@@ -12,7 +12,7 @@ Database design  | => https://drawsql.app/home
 |
 |||||| This may be last project only laravel :) https://www.youtube.com/watch?v=HaHV1_wrjhs&list=PLhPBqF--77ImGEZE6xSS62UVegQOIgP4g&index=3
 
-i wont to use laravel only backend api & frontend vue.js|react.js 
+i wont to use laravel only backend api & frontend vue.js|react.js
 
 */
 
@@ -28,9 +28,9 @@ php artisan = pa
 36 | Project Planning | => https://drawsql.app/vir-za/diagrams/project#
 ___________________________________________________________
 composer create-project laravel/laravel:^8.0 project
- 
+
 cd project
- 
+
 php artisan serve
 php artisan make:model Admin -m
 
@@ -41,7 +41,7 @@ php artisan breeze:install
 
 [{(
     php artisan breeze:install
-    
+
     npm install
     npm run dev
     php artisan migrate
@@ -62,19 +62,19 @@ php artisan migrate
 php artisan make:request CategoryRequest
 php artisan make:request CategoryUpdateRequest
 
-======================need CRUD Color & Size later now use create seeder=================== 
+======================need CRUD Color & Size later now use create seeder===================
 
 Real Project must be use fileable not guarded | cause fileable succerut more then guarded
 
 php artisan make:model Color -ms
 php artisan make:model Size -ms
-php artisan make:controller Admin/SizeController 
-php artisan make:controller Admin/ColorController 
+php artisan make:controller Admin/SizeController
+php artisan make:controller Admin/ColorController
 
 php artisan migrate:fresh --seed
 
 php artisan make:model Product -mf
-php artisan make:controller Admin/ProductController  
+php artisan make:controller Admin/ProductController
 
 
 
@@ -178,4 +178,17 @@ https://www.freepik.com/premium-psd/professional-resume-template_3036231.htm#que
     Route::POST('users/{user}', [UsersController::class, 'update']);
     Route::POST('users/{user}', [UsersController::class, 'destroy']);
     Route::POST('users/{user}/edit', [UsersController::class, 'edit']);
+    */
+
+
+    /*
+echo "# myLaravel" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/virza805/myLaravel.git
+git push -u origin main
+
+Tanvir
     */
