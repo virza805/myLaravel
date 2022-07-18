@@ -152,7 +152,6 @@ php artisan route:clear
 php artisan config:clear
 php artisan cache:clear
 
-https://www.freepik.com/premium-vector/simple-id-card-design_2623288.htm#query=school%20id%20card%20simple&position=25&from_view=search
 
 https://www.freepik.com/premium-psd/professional-resume-template_3036231.htm#query=school%20id%20card%20simple&position=22&from_view=search
 
@@ -182,13 +181,18 @@ https://www.freepik.com/premium-psd/professional-resume-template_3036231.htm#que
 
 
     /*
-echo "# myLaravel" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/virza805/myLaravel.git
-git push -u origin main
+https://www.youtube.com/watch?v=eFpDO487Rqg&list=PLnhrpn1DBwx6MadqSAvKIae1nx0PC-kiH&index=28
 
-Tanvir
+
+
+
+
+
+
+
+
+
+
+
+
     */
