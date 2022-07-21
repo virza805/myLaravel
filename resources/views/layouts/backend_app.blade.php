@@ -89,6 +89,8 @@
             @endif
         </script>
         <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="{{ asset('custom.js') }}"></script>
         @stack('js')
 </body>
 
