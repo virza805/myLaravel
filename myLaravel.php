@@ -181,9 +181,9 @@ https://www.freepik.com/premium-psd/professional-resume-template_3036231.htm#que
 
 
     /*
-https://www.youtube.com/watch?v=eFpDO487Rqg&list=PLnhrpn1DBwx6MadqSAvKIae1nx0PC-kiH&index=28
+https://www.youtube.com/watch?v=uq6i-4hjHhM&list=PLnhrpn1DBwx6MadqSAvKIae1nx0PC-kiH&index=30
 
-
+16:23 / 1:03:41 =>
 
 
 
