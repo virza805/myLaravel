@@ -13,6 +13,12 @@
                     <div class="top_bar_menu">
                         <ul class="standard_dropdown top_bar_dropdown">
                             <li>
+                                <a href="{{ route('admin.login') }}">AdminLogin</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('admin.register') }}">AdminRegister</a>
+                            </li>
+                            <li>
                                 <a href="#">English<i class="fas fa-chevron-down"></i></a>
                                 <ul>
                                     <li><a href="#">Italian</a></li>

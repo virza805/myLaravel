@@ -14,23 +14,12 @@ Route::prefix('admin')->name('admin.')->group(function() {
 
     Route::post('login', [AdminAuthController::class, 'authenticate'])->name('login');
     Route::post('register', [AdminAuthController::class, 'store'])->name('register');
+});
 
+Route::prefix('admin')->name('admin.')->middleware(['auth:admin'])->group(function() {
     Route::get('dashboard', [AdminAuthController::class, 'dashboard'])->name('dashboard');
     Route::post('logout', [AdminAuthController::class, 'logout'])->name('logout');
 
-
-
-
-    // Route::view('test', 'layouts.backend_master');
-    // Route::view('test', 'layouts.backend_app');
-
-    // Route::view('login', 'backend.auth.login');
-    // Route::view('dashboard', 'backend.dashboard');
-
-    // Route::resource('category', CategoryController::class);
-    // Route::get('/dashboard', function () {
-    //     return view('backend.dashboard');
-    // })->middleware(['auth:admin'])->name('dashboard');
 
     # Category
     Route::prefix('category')->name('category.')->group(function () {

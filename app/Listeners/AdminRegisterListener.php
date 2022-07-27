@@ -4,6 +4,7 @@ namespace App\Listeners;
 
 use App\Events\AdminRegisterEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Queue\InteractsWithQueue;
 
 class AdminRegisterListener
@@ -26,7 +27,7 @@ class AdminRegisterListener
      */
     public function handle(AdminRegisterEvent $event)
     {
-        if ($event->admin-> instanceof MustVerifyEmail && !$event->admin->hasVerifiedEmail()) {
+        if ($event->admin instanceof MustVerifyEmail && !$event->admin->hasVerifiedEmail()) {
             $event->admin->sendEmailVerificationNotification();
         }
     }

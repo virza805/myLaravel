@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Events\AdminRegisterEvent;
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -28,12 +30,12 @@ class AdminAuthController extends Controller
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
-            'email' => ['required', 'exists:users,email'],
-            'email' => ['required'],
+            'email' => ['required', 'exists:admins,email'],
+            'password' => ['required'],
         ]);
         if (Auth::guard('admin')->attempt($credentials) ) {
             $request->session()->regenerate();
-            return redirect()->route('backend.dashboard');
+            return redirect()->route('admin.dashboard');
         } else {
             return back()->withErrors(['email' => 'Something is wrong !!']);
         }
@@ -77,15 +79,20 @@ class AdminAuthController extends Controller
      */
     public function store(Request $request)
     {
-        // return  $request->all();
-        $user = Admin::create([
+
+        $admin = Admin::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => bcrypt($request->input('password')),
-            // 'password' => Hash::make($request->password),
         ]);
 
         return redirect()->route('admin.login');
+
+        // event(new AdminRegisterEvent($admin));
+
+        // Auth::login($admin);
+        // return redirect(RouteServiceProvider::ADMIN_HOME);
+
     }
 
 

@@ -6,17 +6,20 @@
 
 <div class="login-page bg-dark" style="min-height: 496.781px;">
     <div class="login-box">
+
       <div class="login-logo">
-        <a href="../../index2.html" class="text-success" ><b>Admin</b>LTE Tavnir</a>
+
+        <a href="{{ asset('backend') }}/index.html" class="text-success" ><b>Admin</b>LTE</a>
       </div>
       <!-- /.login-logo -->
       <div class="card">
         <div class="card-body login-card-body">
+            <h2 style="text-align: center"><a href="/"><img src="{{ asset('frontend') }}/img/vir.png" alt="" srcset=""></a></h2>
           <p class="login-box-msg">Sign in to start your session</p>
 @error('email')
     {{ $message }}
 @enderror
-          <form action="{{ route('admin.store') }}" method="post">
+          <form action="{{ route('admin.login') }}" method="post">
             @csrf
             <div class="input-group mb-3">
               <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}">
@@ -37,10 +40,11 @@
             <div class="row">
               <div class="col-8">
                 <div class="icheck-primary">
-                  <input type="checkbox" id="remember">
+                    <a href="{{ route('admin.register') }}" class="text-center">Register a new</a>
+                  {{-- <input type="checkbox" id="remember">
                   <label for="remember">
                     Remember Me
-                  </label>
+                  </label> --}}
                 </div>
               </div>
               <!-- /.col -->
@@ -62,12 +66,12 @@
           </div> --}}
           <!-- /.social-auth-links -->
 
-          <p class="mb-1">
+          {{-- <p class="mb-1">
             <a href="forgot-password.html">I forgot my password</a>
-          </p>
-          <p class="mb-0">
+          </p> --}}
+          {{-- <p class="mb-0">
             <a href="{{ route('admin.register') }}" class="text-center">Register a new membership</a>
-          </p>
+          </p> --}}
         </div>
         <!-- /.login-card-body -->
       </div>
