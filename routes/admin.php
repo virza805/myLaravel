@@ -12,8 +12,11 @@ Route::prefix('admin')->name('admin.')->group(function() {
     Route::get('login', [AdminAuthController::class, 'login'])->name('login');
     Route::get('register', [AdminAuthController::class, 'register'])->name('register');
 
-    Route::get('login', [AdminAuthController::class, 'authenticate'])->name('login');
-    Route::get('register', [AdminAuthController::class, 'store'])->name('register');
+    Route::post('login', [AdminAuthController::class, 'authenticate'])->name('login');
+    Route::post('register', [AdminAuthController::class, 'store'])->name('register');
+
+    Route::get('dashboard', [AdminAuthController::class, 'dashboard'])->name('dashboard');
+    Route::post('logout', [AdminAuthController::class, 'logout'])->name('logout');
 
 
 
