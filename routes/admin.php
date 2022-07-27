@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SubCategoryController;
 use App\Http\Controllers\Admin\ProductController;
@@ -8,8 +9,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->group(function() {
 
+    Route::get('login', [AdminAuthController::class, 'login'])->name('login');
+    Route::get('register', [AdminAuthController::class, 'register'])->name('register');
+
+    Route::get('login', [AdminAuthController::class, 'authenticate'])->name('login');
+    Route::get('register', [AdminAuthController::class, 'store'])->name('register');
+
+
+
+
     // Route::view('test', 'layouts.backend_master');
-    Route::view('test', 'layouts.backend_app');
+    // Route::view('test', 'layouts.backend_app');
 
     // Route::view('login', 'backend.auth.login');
     // Route::view('dashboard', 'backend.dashboard');

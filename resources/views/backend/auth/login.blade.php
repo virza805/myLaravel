@@ -7,7 +7,7 @@
 <div class="login-page bg-dark" style="min-height: 496.781px;">
     <div class="login-box">
       <div class="login-logo">
-        <a href="../../index2.html" class="text-success" ><b>Admin</b>LTE</a>
+        <a href="../../index2.html" class="text-success" ><b>Admin</b>LTE Tavnir</a>
       </div>
       <!-- /.login-logo -->
       <div class="card">

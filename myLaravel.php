@@ -187,11 +187,11 @@ https://www.youtube.com/watch?v=uq6i-4hjHhM&list=PLnhrpn1DBwx6MadqSAvKIae1nx0PC-
 
 
 
+https://www.youtube.com/watch?v=O0amqD8O0Sk&list=PLnhrpn1DBwx6MadqSAvKIae1nx0PC-kiH&index=28&ab_channel=ARShahin
 
+13:47 / 38:55 =>
 
-
-
-
+php artisan make:controller Admin/AdminAuthController -r
 
 
 https://codesandbox.io/s/ykx164y2w1?file=/src/App.vue
