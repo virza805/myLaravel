@@ -32,7 +32,7 @@
                <h3 class="text-info">Add Category</h3>
            </div>
            <div class="card-body">
-               <form action=""  method="POST" id="addCategoryForm">
+               <form action=""  method="POST" id="addCategoryForm" enctype="multipart/form-data" >
                    <div class="form-group">
                        <input type="text" class="form-control" id="name" placeholder="Category Name">
                        <span class="text-danger" id="catNameError"></span>
@@ -88,7 +88,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="" id="editDataForm" method="POST">
+                    <form action="" id="editDataForm" method="POST" enctype="multipart/form-data" >
                         <div class="form-group">
                             <input type="text" class="form-control" id="edit_name">
                             {{-- <input type="hidden" class="form-control" id="edit_id"> --}}
@@ -193,7 +193,7 @@
                 </tr>
                 <tr>
                     <th>Image</th>
-                    <th><img src="${res.data.name}" alt=""></th>
+                    <th><img src="${res.data.image}" alt=""></th>
                 </tr>
                 `
                 let tby = $('#viewCatTbody')

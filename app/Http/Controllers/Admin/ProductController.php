@@ -100,6 +100,30 @@ class ProductController extends Controller
                 'image' => File::upload($image, 'product/slider')
             ]);
         }
+
+        // if(!empty($request->featured_image)) {
+        //     $featured_image_name = time() . '-' . $request->featured_image->getClientOriginalName();
+        //     // store the file
+        //     $request->featured_image->storeAs('public/uploads', $featured_image_name);
+
+        //     $property->featured_image = $featured_image_name;
+        // }
+
+
+        // foreach($request->gallery_images as $image) {
+        //     if(!empty($image)) {
+        //         $gallery_image_name = time() . '-' . $image->getClientOriginalName();
+        //         $image->storeAs('public/uploads', $gallery_image_name);
+        //         $media = new Media();
+        //         $media->name = $gallery_image_name;
+
+        //         $media->property_id = $property->id;
+        //         $media->save();
+        //     }
+
+        // }
+
+
         session()->flash('success', 'Product Added Successfully!');
         return redirect()->route('admin.product.index');
     }
